@@ -96,7 +96,8 @@ class GraduacoesController extends Controller
 
         if ($graduacao->delete())
         {
-            return '<script>swal("OK", "Registro Removido com Sucesso!", "success");</script>';
+
+            return redirect()->back()->with('success', 'Registro Removido com Sucesso!');
         }
         else
         {

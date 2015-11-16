@@ -9,6 +9,7 @@
     <style>body{margin-top: 10px;}</style>
 </head>
 <body class="container">
+   @include('partials.alerts')
     @yield('content')
     <script src="{!! asset('bower_components/jquery/dist/jquery.js') !!}" type="text/javascript"></script>
     <script src="{!! asset('bower_components/bootstrap/dist/js/bootstrap.js') !!}" type="text/javascript"></script>
