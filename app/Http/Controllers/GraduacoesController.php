@@ -94,8 +94,13 @@ class GraduacoesController extends Controller
     {
         $graduacao = Graduacoes::find($id);
 
-        dd($graduacao);
-
-        //return $graduacao->delete();
+        if ($graduacao->delete())
+        {
+            return '<script>swal("OK", "Registro Removido com Sucesso!", "success");</script>';
+        }
+        else
+        {
+            return '<script>swal("Ooops", "Erro ao Tentar Remover Registro!", "success")</script>';
+        }
     }
 }
