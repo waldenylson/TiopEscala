@@ -47,7 +47,7 @@ class GraduacoesController extends Controller
 
         $graduacao->save();
 
-        return redirect()->back()->with('success', 'Inserido com sucesso!');
+        return redirect()->back()->with('message', 'Inserido com sucesso!');
     }
 
     /**
@@ -97,11 +97,11 @@ class GraduacoesController extends Controller
         if ($graduacao->delete())
         {
 
-            return redirect()->back()->with('success', 'Registro Removido com Sucesso!');
+            return redirect()->back()->with('message', 'Registro Removido com Sucesso!');
         }
         else
         {
-            return '<script>swal("Ooops", "Erro ao Tentar Remover Registro!", "success")</script>';
+            return redirect()->back()->with('message', 'Erro ao Tentar Remover o Registro!');
         }
     }
 }

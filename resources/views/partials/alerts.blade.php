@@ -1,8 +1,6 @@
 
-@if (Session::has('success'))
+@if (Session::has('message'))
     <script type="text/javascript">
-        $(document).ready(function() {
-            sweetAlert("Atenção!", "{!! Session::get('success') !!}", "success");
-        });
+        swal("", "{!! Session::get('message') !!}", "success");
     </script>
 @endif

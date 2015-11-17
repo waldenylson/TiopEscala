@@ -24,7 +24,7 @@
                             <i class="fa fa-fw fa-pencil"></i> editar
                         </a>
 
-                        <a href="{!! route('graduacoes.delete', $graduacao->id) !!}" class="btn btn-danger btn-xs">
+                        <a href="{!! route('graduacoes.delete', $graduacao->id) !!}" class="btn btn-danger btn-xs btn-remover">
                             <i class="fa fa-fw fa-remove"></i> remover
                         </a>
                     </td>

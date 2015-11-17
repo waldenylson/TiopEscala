@@ -16,7 +16,30 @@ $(document).ready(function()
         }
     });
 
-    //swal({   title: "Error!",   text: "Here's my error message!",   type: "error",   confirmButtonText: "Cool" });
+    $("a.btn-remover").click(function(e)
+    {
+        e.preventDefault();
+        var link = $(this).attr('href');
+
+        swal(
+        {
+            title: "Deseja Mesmo Remover o Registro?",
+            text: "Esta operação não poderá ser desfeita!",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#DD6B55",
+            confirmButtonText: "Sim, Remova-o!",
+            cancelButtonText: "Cancelar",
+            closeOnConfirm: false
+        },
+        function(isConfirm)
+        {
+            if (isConfirm)
+            {
+                window.location = link;
+            }
+        });
+    });
 
     $("#btn-cancelar").click(function()
     {
