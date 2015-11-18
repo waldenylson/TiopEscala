@@ -1,5 +1,7 @@
 <?php
 
+Route::get('/escala', "EscalaController@gerarEscala");
+
 Route::get('/', 'HomeController@index');
 Route::get('home', function()
 {

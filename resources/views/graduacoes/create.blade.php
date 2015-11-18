@@ -5,8 +5,6 @@
         Cadastrar Graduação
     </h2>
 
-    @include('partials.alerts')
-
     {!! Form::open(['route' => 'graduacoes.store']) !!}
         <div class="form-group well">
             <div class="row">
