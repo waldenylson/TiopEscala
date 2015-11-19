@@ -19,16 +19,23 @@ class EscalaController extends Controller
         6 => 'Sábado'
     );
 
-    protected $dias_no_mes = date("t");
-    protected $mes_atual   = date("m");
-    protected $ano_atual   = date("Y");
+    protected $dias_no_mes;
+    protected $mes_atual;
+    protected $ano_atual;
+
+    public function __construct()
+    {
+        $this->dias_no_mes = date("t");
+        $this->mes_atual   = date("m");
+        $this->ano_atual   = date("Y");
+    }
 
     public function gerarEscala()
     {
         return view('escala.gerarEscala')->with('dias_da_semana', $this->dias_da_semana);
     }
 
-    private function manipulacaoDatas()
+    private function manipulacaoDatas($dias = null, $mes = null, $ano = null)
     {
         for($dia = 1; $dia <= $this->dias_no_mes; $dia++)
         {

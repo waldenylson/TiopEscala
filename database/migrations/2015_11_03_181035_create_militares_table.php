@@ -16,9 +16,13 @@ class CreateMilitaresTable extends Migration
             $table->increments('id');
             $table->integer('graduacao_id');
             $table->string('nome_grerra');
-            $table->integer('qvermelho');
-            $table->integer('qpreto');
-            $table->integer('qroxo');
+            $table->string('agenda');
+            $table->string('email');
+            $table->string('tel_adicional');
+            $table->string('situacao');
+            $table->integer('q_vermelho');
+            $table->integer('q_preto');
+            $table->integer('q_roxo');
             $table->timestamps();
 
             $table->foreign('graduacao_id')->references('id')->on('graduacoes');
